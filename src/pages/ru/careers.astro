@@ -1,0 +1,55 @@
+---
+import Layout from '~/layouts/PageLayoutRu.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Карьера | AEW Agency',
+};
+---
+
+<Layout metadata={metadata}>
+  <Features2
+    title="Присоединяйтесь к AEW Agency"
+    subtitle="Мы ищем увлеченных людей, чтобы вместе оставить свой след (dent) во вселенной."
+    items={[
+      {
+        title: 'AI Инженер',
+        description: 'Проектирование и внедрение передовых LLM пайплайнов и автономных агентов.',
+        icon: 'tabler:robot',
+      },
+      {
+        title: 'Prompt Инженер',
+        description:
+          'Создание оптимизированных промптов для обеспечения топовых позиций наших клиентов в ответах ChatGPT.',
+        icon: 'tabler:writing',
+      },
+      {
+        title: 'Full Stack Разработчик',
+        description: 'Создание надежных веб-приложений и дашбордов автоматизации для наших AI сервисов.',
+        icon: 'tabler:code',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Записаться на бесплатную консультацию',
+        href: 'https://cal.com/example',
+        target: '_blank',
+        icon: 'tabler:calendar',
+      },
+    ]}
+  >
+    <Fragment slot="title"> Хотите работать с нами? </Fragment>
+    <Fragment slot="subtitle">
+      Даже если вы не видите подходящей вакансии, запишитесь на бесплатную консультацию. Мы всегда ищем таланты.
+    </Fragment>
+  </CallToAction>
+</Layout>

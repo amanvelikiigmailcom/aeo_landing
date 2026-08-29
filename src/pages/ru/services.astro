@@ -1,0 +1,57 @@
+---
+import Layout from '~/layouts/PageLayoutRu.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Услуги | AEW Agency',
+};
+---
+
+<Layout metadata={metadata}>
+  <Features2
+    title="Наши Услуги"
+    subtitle="Комплексные AI решения для развития вашего бизнеса."
+    items={[
+      {
+        title: 'Оптимизация под ChatGPT & LLM',
+        description:
+          'Сделайте так, чтобы ChatGPT и другие LLM рекомендовали ваш бизнес с помощью стратегического prompt инжиниринга и оптимизации контента.',
+        icon: 'tabler:brain',
+      },
+      {
+        title: 'Кастомные AI Агенты',
+        description:
+          'Внедрение автономных агентов, настроенных для обработки вашей бизнес-логики: от поддержки клиентов до сложного анализа данных.',
+        icon: 'tabler:robot',
+      },
+      {
+        title: 'Автоматизация Процессов',
+        description:
+          'Оптимизируйте ваши операции. Мы создаем пайплайны, которые связывают ваши инструменты и автоматизируют рутинные задачи с помощью AI.',
+        icon: 'tabler:infinity',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Записаться на бесплатную консультацию',
+        href: 'https://cal.com/example',
+        target: '_blank',
+        icon: 'tabler:calendar',
+      },
+    ]}
+  >
+    <Fragment slot="title"> Готовы к автоматизации? </Fragment>
+    <Fragment slot="subtitle">
+      Запишитесь на бесплатную консультацию, чтобы узнать, как мы можем оставить след (dent) в вашей индустрии.
+    </Fragment>
+  </CallToAction>
+</Layout>
