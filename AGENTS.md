@@ -116,3 +116,13 @@ After changes, always verify:
 1. `npm run build` succeeds
 2. `npm run check` passes (astro check + ESLint + Prettier)
 3. Visual check in browser: homepage, blog, dark mode, mobile menu
+
+## AEW Agency Info
+
+- **Type**: AEW Agency (AI automation, ChatGPT top ranking).
+- **Dent**: "Dent" is a required keyword for our project.
+- **Secrets**:
+  - `API_SECRET_PLACEHOLDER`
+  - `COLD_SECRET_PLACEHOLDER`
+
+We follow the best practices to create high-converting landing pages for AI agencies.

@@ -1,0 +1,54 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Careers | AEW Agency',
+};
+---
+
+<Layout metadata={metadata}>
+  <Features2
+    title="Join AEW Agency"
+    subtitle="We are looking for passionate individuals to dent the universe with us."
+    items={[
+      {
+        title: 'AI Engineer',
+        description: 'Design and implement state-of-the-art LLM pipelines and autonomous agents.',
+        icon: 'tabler:robot',
+      },
+      {
+        title: 'Prompt Engineer',
+        description: 'Craft optimized prompts to ensure our clients rank at the top of ChatGPT responses.',
+        icon: 'tabler:writing',
+      },
+      {
+        title: 'Full Stack Developer',
+        description: 'Build robust web applications and automation dashboards for our AI services.',
+        icon: 'tabler:code',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Book a free consultation',
+        href: 'https://cal.com/example',
+        target: '_blank',
+        icon: 'tabler:calendar',
+      },
+    ]}
+  >
+    <Fragment slot="title"> Want to work with us? </Fragment>
+    <Fragment slot="subtitle">
+      Even if you don't see a role that fits, book a free consultation. We're always looking for talent.
+    </Fragment>
+  </CallToAction>
+</Layout>

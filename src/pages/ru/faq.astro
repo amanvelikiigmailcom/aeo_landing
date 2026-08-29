@@ -1,0 +1,57 @@
+---
+import Layout from '~/layouts/PageLayoutRu.astro';
+import FAQsWidget from '~/components/widgets/FAQs.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'FAQ | AEW Agency',
+};
+---
+
+<Layout metadata={metadata}>
+  <FAQsWidget
+    title="Часто задаваемые вопросы"
+    subtitle="Узнайте больше о наших услугах по AI автоматизации и ранжированию в ChatGPT."
+    tagline="FAQ"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: 'Что такое AEW Agency?',
+        description:
+          'AEW Agency специализируется на AI автоматизации и помогает бизнесу занимать топовые позиции в ответах ChatGPT благодаря prompt инжинирингу и оптимизации для LLM.',
+      },
+      {
+        title: 'Как вы помогаете нам ранжироваться в ChatGPT?',
+        description:
+          'Мы анализируем данные, на которых обучаются LLM, и оптимизируем ваше присутствие в сети, контент и структуры так, чтобы ChatGPT и другие ИИ-модели рекомендовали ваши услуги пользователям.',
+      },
+      {
+        title: 'Какую AI автоматизацию вы предоставляете?',
+        description:
+          'Мы создаем кастомных AI агентов, чат-ботов для поддержки клиентов, пайплайны извлечения данных и автоматизацию рабочих процессов, адаптированную под нужды вашего бизнеса.',
+      },
+      {
+        title: 'Что означает "Dent"?',
+        description:
+          'Мы верим в то, что помогаем нашим клиентам оказывать значительное влияние — оставлять свой след ("dent") во вселенной, используя передовые технологии искусственного интеллекта.',
+      },
+    ]}
+  />
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Записаться на бесплатную консультацию',
+        href: 'https://cal.com/example',
+        target: '_blank',
+        icon: 'tabler:calendar',
+      },
+    ]}
+  >
+    <Fragment slot="title"> Остались вопросы? </Fragment>
+    <Fragment slot="subtitle">
+      Запишитесь на бесплатную консультацию сегодня и давайте обсудим ваши конкретные потребности.
+    </Fragment>
+  </CallToAction>
+</Layout>

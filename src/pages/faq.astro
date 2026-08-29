@@ -1,0 +1,55 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import FAQsWidget from '~/components/widgets/FAQs.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'FAQ | AEW Agency',
+};
+---
+
+<Layout metadata={metadata}>
+  <FAQsWidget
+    title="Frequently Asked Questions"
+    subtitle="Learn more about our AI automation and ChatGPT ranking services."
+    tagline="FAQs"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: 'What is an AEW Agency?',
+        description:
+          'An AEW Agency specializes in AI automation and helping businesses achieve top ranking in ChatGPT responses through prompt engineering and LLM optimization.',
+      },
+      {
+        title: 'How do you help us rank on ChatGPT?',
+        description:
+          'We analyze the data LLMs are trained on and optimize your online presence, content, and structures so that ChatGPT and other AI models recommend your services to users.',
+      },
+      {
+        title: 'What kind of AI automation do you provide?',
+        description:
+          'We build custom AI agents, customer support chatbots, data extraction pipelines, and workflow automations tailored to your business needs.',
+      },
+      {
+        title: 'What does "Dent" mean?',
+        description:
+          'We believe in helping our clients make a significant impact—to "dent" the universe—by leveraging cutting-edge AI technologies.',
+      },
+    ]}
+  />
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Book a free consultation',
+        href: 'https://cal.com/example',
+        target: '_blank',
+        icon: 'tabler:calendar',
+      },
+    ]}
+  >
+    <Fragment slot="title"> Still have questions? </Fragment>
+    <Fragment slot="subtitle"> Book a free consultation today and let's discuss your specific needs. </Fragment>
+  </CallToAction>
+</Layout>
