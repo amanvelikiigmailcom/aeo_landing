@@ -58,12 +58,12 @@ export default defineConfig({
 
   // Native Fonts API: self-hosts + subsets + preloads Inter and generates
   // metric-adjusted fallbacks. Injected via <Font /> in Layout.astro and
-  // consumed through the `--font-inter` CSS variable in CustomStyles.astro.
+  // consumed through the `--font-space-grotesk` CSS variable in CustomStyles.astro.
   fonts: [
     {
       provider: fontProviders.fontsource(),
-      name: 'Inter',
-      cssVariable: '--font-inter',
+      name: 'Space Grotesk',
+      cssVariable: '--font-space-grotesk',
       weights: ['100 900'],
       styles: ['normal'],
       subsets: ['latin'],

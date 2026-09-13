@@ -25,4 +25,6 @@ pnpm-debug.log*
 pnpm-lock.yaml
 pnpm-workspace.yaml
 
-.astro
+.astrocloudflared
+*.log
+patch_font_and_colors.py
