@@ -45,8 +45,8 @@ const whenExternalScripts = (items: (() => AstroIntegration) | (() => AstroInteg
   hasExternalScripts ? (Array.isArray(items) ? items.map((item) => item()) : [items()]) : [];
 
 export default defineConfig({
-  site: "https://arthelokyo.github.io/astrowind/",
-  base: "/astrowind",
+  site: "https://amanvelikiigmailcom.github.io/aeo_landing/",
+  base: "/aeo_landing",
   output: "static",
 
   // Prefetch links as they enter the viewport for snappier navigations
